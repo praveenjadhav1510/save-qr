@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 📱 QR Manager Pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, offline-first web application built with React to scan, manage, and generate QR codes. Designed as a **single-file application**—no build tools or complex setup required.
 
-## Available Scripts
+### 🚀 [Live Demo](https://praveenjadhav1510.github.io/save-qr/)
+Click the link above to try the application directly in your browser.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **📷 Live Scanning:** Real-time QR code scanning using the device camera.
+* **💾 Local Storage:** All scanned codes are saved locally in your browser. No data leaves your device.
+* **🏷️ Organization:** Tag, categorize, and "Favorite" your QR codes for easy access.
+* **🔍 Search & Filter:** Powerful search (Ctrl + K) and tag filtering to find codes instantly.
+* **📤 Import / Export:** Backup your data to JSON and restore it on any device.
+* **🎨 Dark/Light Mode:** Automatic theme detection with a manual toggle (Spacebar).
+* **⚡ Zero Dependencies:** Run it locally without `npm install` or build steps.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+This project is built as a Single Page Application (SPA) contained entirely within one HTML file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Core:** React 18 & ReactDOM (via CDN)
+* **Routing:** React Router DOM v6
+* **Scanning:** `html5-qrcode` library
+* **Generation:** `qrcode.js` library
+* **Styling:** CSS3 Variables & Flexbox (No external CSS frameworks)
 
-### `npm run build`
+## ⌨️ Keyboard Shortcuts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Shortcut | Action |
+| :--- | :--- |
+| **`Ctrl + K`** | Focus Search Bar (Saved Page) |
+| **`Ctrl + S`** | Save currently scanned QR |
+| **`Space`** | Toggle Light/Dark Theme |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 How to Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Because this app accesses the **Camera**, browser security policies require it to be served via **HTTPS** or **Localhost**. You cannot simply double-click the `.html` file to access the camera (though the Saved page will still work).
 
-### `npm run eject`
+1.  **Clone the repo:**
+    ```bash
+    git clone [https://github.com/praveenjadhav1510/save-qr.git](https://github.com/praveenjadhav1510/save-qr.git)
+    ```
+2.  **Serve the file:**
+    * **VS Code:** Install the "Live Server" extension, right-click `index.html`, and select "Open with Live Server".
+    * **Python:** Run `python3 -m http.server` in the directory and open `http://localhost:8000`.
+    * **Node:** Run `npx serve .`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔒 Privacy & Security
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **Client-Side Only:** This application has no backend database.
+* **Data Persistence:** Your saved QR codes are stored in your browser's `localStorage`.
+* **Camera Access:** Camera permission is requested only for scanning. No video feeds are recorded or sent to any server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🤝 Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Feel free to fork this repository and submit pull requests. Since the entire app is in `index.html`, it is easy to modify and experiment with!
 
-## Learn More
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📄 License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See `LICENSE` for more information.
